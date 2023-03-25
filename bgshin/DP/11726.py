@@ -4,7 +4,7 @@ import sys
 
 def tile(n):
     
-    a = [0] * (n+1)
+    a = [0] * (n+2)
     
     a[1] = 1
     a[2] = 2
