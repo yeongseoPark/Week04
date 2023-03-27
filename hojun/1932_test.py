@@ -23,7 +23,7 @@ if n_triangle >= 3:
                max(triangle[1])+ triangle[2][1]])
     for i in range(3, n_triangle+1):
         for j in range(i):
-            print(j)
+#            print(j)
             if j == 0:
                 dp.append([dp[i-1][j]+ triangle[i][0]])
             elif j < i-1:
@@ -36,6 +36,6 @@ if n_triangle >= 3:
                 dp[i].append(
                     triangle[i][j]+ dp[i-1][-1]
                 )
-for i in dp:
-    print(i)
-    # print(max(dp[-1]))
+
+#    print(i)
+    print(max(dp[-1]))
