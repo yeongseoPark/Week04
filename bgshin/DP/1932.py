@@ -4,9 +4,7 @@ import sys
 
 n = int(sys.stdin.readline())
 
-trn = []
-for _ in range(n):
-    trn.append(list(map(int, sys.stdin.readline().split())))
+trn = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
 
 for idx, i in enumerate(trn):
     while True:
@@ -30,3 +28,29 @@ def int_trn () :
     return(max(dp[n]))
 
 print(int_trn())
+
+
+# import sys
+# input = sys.stdin.readline
+
+# n = int(input())
+# start = int(input())
+# if n == 1:
+#     print(start)
+# else:
+#     second = list(map(int, input().split()))
+#     second[0] += start
+#     second[1] += start
+
+#     before = [second[0], second[1]]
+#     for i in range(1, n-1):
+#         temp = []
+#         cur = list(map(int, input().split()))
+#         temp.append(before[0] + cur[0])
+#         for j in range(1, i+1):
+#             temp.append(max(cur[j]+before[j-1], cur[j]+before[j]))
+        
+#         temp.append(before[len(before)-1] + cur[len(cur)-1])
+#         before = temp[:]
+
+#     print(max(before))
